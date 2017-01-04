@@ -1,11 +1,12 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers/index';
-import DevTools from '../components/DevTools';
+// import DevTools from '../components/DevTools';
 
 const finalCreateStore = compose(
   applyMiddleware(thunk),
-  DevTools.instrument()
+  // DevTools.instrument(),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
 
 export default function configureStore(initialState) {
@@ -16,6 +17,5 @@ export default function configureStore(initialState) {
       store.replaceReducer(require('../reducers/index'))
     );
   }
-
   return store;
 }

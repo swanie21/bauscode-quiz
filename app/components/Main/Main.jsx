@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-// import QuestionOne from './Questions/Question.one.js';
+import React, { Component, PropTypes } from 'react';
 import quiz from '../../../data/quiz.js';
 
 class Main extends Component {
@@ -11,7 +10,8 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    console.log(quiz[0].questions[0].answers);
+    // console.log(this.props.actions.quiz.getQuestions());
+    this.props.actions.quiz.getQuestions(quiz[0].questions);
   }
 
   render() {
@@ -24,5 +24,10 @@ class Main extends Component {
     );
   }
 }
+
+Main.propTypes = {
+  actions: PropTypes.object,
+  state: PropTypes.object
+};
 
 export default Main;
