@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import quiz from '../../../data/quiz.js';
+import Question from '../Question';
 
 class Quiz extends Component {
   constructor(props) {
@@ -12,13 +13,18 @@ class Quiz extends Component {
   }
 
   render() {
-    return(
+    const questions = this.props.state.getQuestions.questions[0]  ;
+
+    return (
       <section>
-        <p>{quiz[0].questions[0].question}</p>
-        <p>{quiz[0].questions[1].question}</p>
-        <p>{quiz[0].questions[2].question}</p>
-        <p>{quiz[0].questions[3].question}</p>
-        <p>{quiz[0].questions[4].question}</p>
+        {questions.questions.map((question, index) =>
+          <Question
+            key={question.id}
+            id={index}
+            question={question.question}
+            answers={question.answers}
+          />
+        )}
       </section>
     );
   }

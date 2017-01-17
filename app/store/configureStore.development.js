@@ -6,7 +6,7 @@ import rootReducer from '../reducers/index';
 const finalCreateStore = compose(
   applyMiddleware(thunk),
   // DevTools.instrument(),
-  window.devToolsExtension ? window.devToolsExtension() : f => f
+  // window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
 
 export default function configureStore(initialState) {
