@@ -12,7 +12,7 @@ export function getQuestions(questions) {
 
 export function sumScore(score) {
   return {
-    type: 'SUM_SCORE',
+    type: SUM_SCORE,
     score: score
   };
 }

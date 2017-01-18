@@ -1,4 +1,4 @@
-import { SUM_SCORE } from '../actions/counter';
+import { SUM_SCORE } from '../actions/quiz';
 
 export default function sumScore(state = 0, action) {
   switch (action.type) {

@@ -13,16 +13,20 @@ class Quiz extends Component {
   }
 
   render() {
-    const questions = this.props.state.getQuestions.questions[0]  ;
+    const questions = this.props.state.getQuestions.questions[0];
+    const { sumScore } = this.props.actions.quiz;
+    let score = this.props.state.sumScore;
 
     return (
       <section>
+        <h1>Total Score: {score}</h1>
         {questions.questions.map((question, index) =>
           <Question
             key={question.id}
             id={index}
             question={question.question}
             answers={question.answers}
+            sumScore={sumScore}
           />
         )}
       </section>
