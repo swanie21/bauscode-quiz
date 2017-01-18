@@ -5,7 +5,7 @@ import rootReducer from '../reducers/index';
 
 const finalCreateStore = compose(
   applyMiddleware(thunk),
-  // DevTools.instrument(),
+  // DevTools.instrument()
   // window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
 
