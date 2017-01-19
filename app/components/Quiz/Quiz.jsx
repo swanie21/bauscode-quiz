@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import quiz from '../../../data/quiz.js';
 import Question from '../Question';
 
 if (process.env.BROWSER) {
@@ -9,12 +8,6 @@ if (process.env.BROWSER) {
 class Quiz extends Component {
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    document.body.style.backgroundColor = '#b6bac2';
-    const { getQuestions } = this.props.actions.quiz;
-    getQuestions(quiz);
   }
 
   render() {

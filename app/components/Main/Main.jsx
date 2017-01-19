@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { Link } from 'react-router';
+import quiz from '../../../data/quiz.js';
 
 if (process.env.BROWSER) {
   require('../../stylesheets/modules/Main.scss');
@@ -8,7 +9,8 @@ if (process.env.BROWSER) {
 class Main extends Component {
 
   componentDidMount() {
-    document.body.style.backgroundColor = '#d9dde4';
+    const { getQuestions } = this.props.actions.quiz;
+    getQuestions(quiz);
   }
 
   render() {

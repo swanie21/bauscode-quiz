@@ -1,5 +1,9 @@
 @import '../variables.scss';
 
+body {
+  background-color: #d9dde4;
+}
+
 .title {
   background-color: #111;
   color: $white;
@@ -29,8 +33,9 @@
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
   color: $white;
   font-size: 20px;
-  padding: 10px 15px;
   margin-top: 50px;
+  outline: none;
+  padding: 10px 15px;
   transition: all 0.5s ease;
   &:hover {
     background: $colorado-blue;
