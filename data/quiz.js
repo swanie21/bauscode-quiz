@@ -7,19 +7,19 @@ const quiz = [
         answers: [
           {
             score: 10,
-            label: 58
+            label: '58'
           },
           {
             score: 0,
-            label: 50
+            label: '50'
           },
           {
             score: 0,
-            label: 53
+            label: '53'
           },
           {
             score: 0,
-            label: 48
+            label: '48'
           }
         ]
       },

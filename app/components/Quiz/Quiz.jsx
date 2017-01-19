@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import quiz from '../../../data/quiz.js';
 import Question from '../Question';
 
 if (process.env.BROWSER) {
@@ -9,12 +8,6 @@ if (process.env.BROWSER) {
 class Quiz extends Component {
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    document.body.style.backgroundColor = '#b6bac2';
-    const { getQuestions } = this.props.actions.quiz;
-    getQuestions(quiz);
   }
 
   render() {
@@ -27,11 +20,11 @@ class Quiz extends Component {
         <h2 className='score'>Total Score: <span>{score}</span></h2>
         {questions.questions.map((question, index) =>
           <Question
-            key={question.id}
-            id={index}
-            question={question.question}
-            answers={question.answers}
-            sumScore={sumScore}
+          key={question.id}
+          id={index}
+          question={question.question}
+          answers={question.answers}
+          sumScore={sumScore}
           />
         )}
       </section>
