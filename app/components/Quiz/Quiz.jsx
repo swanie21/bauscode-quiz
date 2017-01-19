@@ -8,6 +8,27 @@ if (process.env.BROWSER) {
 class Quiz extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      score: 0,
+      selectedAnswers: [null, null, null, null]
+    };
+  }
+
+  sumScore() {
+    this.state.selectedAnswers.map(score => {
+      this.setState({
+        score: score
+      });
+    });
+  }
+
+  setScores(index, score) {
+    let selectedAnswersArray = this.state.selectedAnswers;
+    selectedAnswersArray[index] = score;
+    this.setState({
+      selectedAnswers: selectedAnswersArray
+    });
+    this.sumScore();
   }
 
   render() {
@@ -17,6 +38,7 @@ class Quiz extends Component {
 
     return (
       <section>
+        <h2>{this.state.score}</h2>
         <h2 className='score'>Total Score: <span>{score}</span></h2>
         {questions.questions.map((question, index) =>
           <Question
@@ -25,6 +47,7 @@ class Quiz extends Component {
             question={question.question}
             answers={question.answers}
             sumScore={sumScore}
+            setScores={this.setScores.bind(this)}
           />
         )}
       </section>
