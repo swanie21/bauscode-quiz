@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 const Answers = ({ id, answers, score, sumScore }) => {
 
   return (
-    <ul>
+    <ul className='answer-list'>
       <li onClick={() => sumScore(score)}>
         <label>
           <input type="radio" name={id} />

@@ -1,0 +1,59 @@
+@import '../variables.scss';
+
+.question {
+  background: $colorado-blue;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+.question-title {
+  color: $white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.answers {
+  background-image: url('../../../public/images/colorado.png');
+  background-size: cover;
+  border: 5px solid $colorado-red;
+  height: 260px;
+  margin: auto;
+  width: 50%;
+}
+
+.score {
+  text-align: right;
+  span {
+    background: $colorado-yellow;
+    padding: 0 10px;
+  }
+}
+
+.answer-list {
+  padding: 0;
+  li {
+    color: $black;
+    padding: 10px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .question {
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  .score {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .question-title {
+    padding: 0 10px;
+  }
+
+  .answers {
+    width: 80%;
+  }
+}
