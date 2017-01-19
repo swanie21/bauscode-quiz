@@ -20,11 +20,11 @@ class Quiz extends Component {
         <h2 className='score'>Total Score: <span>{score}</span></h2>
         {questions.questions.map((question, index) =>
           <Question
-          key={question.id}
-          id={index}
-          question={question.question}
-          answers={question.answers}
-          sumScore={sumScore}
+            key={question.id}
+            id={index}
+            question={question.question}
+            answers={question.answers}
+            sumScore={sumScore}
           />
         )}
       </section>
