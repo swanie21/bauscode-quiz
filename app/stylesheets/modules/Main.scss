@@ -56,3 +56,49 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media screen and (max-width: 770px) {
+  .title {
+    font-size: 40px;
+    margin: 0 auto;
+    margin-top: 120px;
+    transform: rotate(3deg);
+    transform-origin: top right;
+    width: 90%;
+  }
+
+  .flag-text {
+    font-size: 40px;
+  }
+
+  .quiz-topic {
+    font-size: 18px;
+    transform: rotate(-2deg);
+    transform-origin: top right;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .title {
+    font-size: 30px;
+    margin-top: 50px;
+    transform: rotate(0deg);
+  }
+
+  .flag-text {
+    font-size: 30px;
+  }
+
+  .quiz-topic {
+    margin: auto;
+    margin-top: 10px;
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .title, .flag-text {
+    font-size: 28px;
+  }
+}

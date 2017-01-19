@@ -36,3 +36,24 @@
     padding: 10px 0 0 0;
   }
 }
+
+@media screen and (max-width: 770px) {
+  .question {
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  .score {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .question-title {
+    padding: 0 10px;
+  }
+
+  .answers {
+    width: 80%;
+  }
+}
