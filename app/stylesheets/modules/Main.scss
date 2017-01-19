@@ -1,0 +1,58 @@
+@import '../variables.scss';
+
+.title {
+  background-color: #111;
+  color: $white;
+  margin-top: 140px;
+  padding: 10px 0;
+  text-align: center;
+  transform: rotate(-3deg);
+  transform-origin: top left;
+  transition: 0.5s ease;
+}
+
+.quiz-topic {
+  background-color: lighten(#111, 8%);
+  color: $white;
+  font-size: 20px;
+  margin: -20px 0 0 40px;
+  padding: 20px 0;
+  text-align: center;
+  transform: rotate(2deg);
+  transform-origin: top left;
+}
+
+.quiz-button {
+  background: $colorado-red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+  color: $white;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin-top: 50px;
+  transition: all 0.5s ease;
+  &:hover {
+    background: $colorado-blue;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+.button-container {
+  margin: auto;
+  text-align: center;
+}
+
+.flag-text {
+  background: url('http://www.imfromdenver.com/wp-content/uploads/2014/08/Colorado-Flag.png');
+  background-size: contain;
+  color: #fff;
+  display: inline-block;
+  font-size: 60px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

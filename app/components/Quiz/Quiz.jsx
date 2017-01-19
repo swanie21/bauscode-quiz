@@ -8,6 +8,8 @@ class Quiz extends Component {
   }
 
   componentDidMount() {
+    // document.body.style.backgroundImage = 'none';
+    document.body.style.backgroundColor = 'green';
     const { getQuestions } = this.props.actions.quiz;
     getQuestions(quiz);
   }
