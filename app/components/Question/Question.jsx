@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react';
 import Answers from '../Answers';
 
-const Question = ({ id, question, answers, sumScore }) => {
-
+const Question = ({ id, question, answers, sumScore, answerFeedback }) => {
   return (
     <section className='question' key={id}>
       <h3 className='question-title'>{question}</h3>
@@ -14,6 +13,7 @@ const Question = ({ id, question, answers, sumScore }) => {
             sumScore={sumScore}
             answers={answer.label}
             score={answer.score}
+            answerFeedback={answerFeedback}
           />
         )}
       </article>
@@ -25,7 +25,8 @@ Question.propTypes = {
   id: PropTypes.number,
   question: PropTypes.string,
   answers: PropTypes.array,
-  sumScore: PropTypes.func
+  sumScore: PropTypes.func,
+  answerFeedback: PropTypes.func
 };
 
 export default Question;

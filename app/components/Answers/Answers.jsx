@@ -1,12 +1,11 @@
 import React, { PropTypes } from 'react';
 
-const Answers = ({ id, answers, score, sumScore }) => {
-
+const Answers = ({ id, answers, score, sumScore, answerFeedback }) => {
   return (
     <ul className='answer-list'>
       <li onClick={() => sumScore(score)}>
-        <label>
-          <input type="radio" name={id} />
+        <label onClick={() => answerFeedback(score)}>
+          <input type='radio' name={id} />
           {answers}
         </label>
       </li>
@@ -15,12 +14,11 @@ const Answers = ({ id, answers, score, sumScore }) => {
 };
 
 Answers.propTypes = {
-  actions: PropTypes.object,
-  state: PropTypes.object,
   id: PropTypes.number,
   answers: PropTypes.string,
   score: PropTypes.number,
-  sumScore: PropTypes.func
+  sumScore: PropTypes.func,
+  answerFeedback: PropTypes.func
 };
 
 export default Answers;
